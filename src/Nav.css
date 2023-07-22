@@ -1,0 +1,29 @@
+nav {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  text-align: center;
+  vertical-align: -webkit-baseline-middle;
+}
+
+nav img {
+  display: block;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 20px;
+  margin: 1rem 2rem;
+  font-family: Karla;
+  font-weight: bolder;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
