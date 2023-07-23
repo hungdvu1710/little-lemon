@@ -73,6 +73,12 @@ section {
   padding: 0 20vw;
 }
 
+form {
+  display: grid;
+  max-width: 200px;
+  gap: 20px
+}
+
 @media screen and (max-width: 1800px) {
   h1 { font-size: 4rem; }
   h2 { font-size: 3rem; }
