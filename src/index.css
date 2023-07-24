@@ -69,8 +69,26 @@ button {
   padding: 1rem 2rem;
 }
 
-section {
+button:hover {
+  background-color: #495E57;
+  color: white;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F4CE14;
+}
+
+section, header, nav {
   padding: 0 20vw;
+}
+
+footer {
+  padding: 2rem 20vw;
 }
 
 form {
@@ -90,7 +108,7 @@ form {
 @media screen and (max-width: 1600px) {
   h1 { font-size: 3rem; }
   h2 { font-size: 2.25rem; }
-  h3, h4, h5, h6, p, button { font-size: 1.25rem; }
+  h3, h4, h5, h6, p, button, a { font-size: 1.25rem; }
   button {
     padding: 0.75rem 1.5rem;
   }
@@ -99,13 +117,13 @@ form {
 @media screen and (max-width: 1400px) {
   h1 { font-size: 2.25rem; }
   h2 { font-size: 1.6875rem; }
-  h3, h4, h5, h6, p, button { font-size: 0.9375rem; }
+  h3, h4, h5, h6, p, button, a { font-size: 0.9375rem; }
 }
 
 @media screen and (max-width: 1100px) {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.6rem; }
-  h3, h4, h5, h6, p, button { font-size: 0.85rem; }
+  h3, h4, h5, h6, p, button, a { font-size: 0.85rem; }
   button {
     padding: 0.5rem 1rem;
   }
@@ -114,9 +132,13 @@ form {
 @media screen and (max-width: 1000px) {
   h1 { font-size: 1.5rem; }
   h2 { font-size: 1.25rem; }
-  h3, h4, h5, h6, p, button { font-size: 0.7rem; }
-  section {
+  h3, h4, h5, h6, p, button, a { font-size: 0.7rem; }
+  section, header, nav {
     padding: 0 15vw;
+  }
+
+  footer {
+    padding: 1.5rem 15vw;
   }
 }
 
@@ -124,7 +146,11 @@ form {
   h1 { font-size: 1.25rem; }
   h2 { font-size: 1rem; }
   h3, h4, h5, h6, p, button { font-size: 0.6rem; }
-  section {
+  section, header, nav {
     padding: 0 10vw;
+  }
+
+  footer {
+    padding: 1rem 10vw;
   }
 }
