@@ -9,6 +9,7 @@ const BookingPage = (props) => {
       occasionState={props.occasionState}
       availableTimesState={props.availableTimesState}
       resTimeState={props.resTimeState}
+      handleSubmit={props.handleSubmit}
     />
     </section>
   );

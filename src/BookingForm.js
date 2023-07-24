@@ -9,7 +9,7 @@ const BookingForm = (props) => {
 
 
   return (
-    <form>
+    <form onSubmit={props.handleSubmit}>
       <label htmlFor="res-date">Choose date</label>
       <input
         type="date"
