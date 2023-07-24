@@ -1,4 +1,4 @@
-import HorizontalLogo from './assets/Logo.svg'
+import HorizontalLogo from '../assets/Logo.svg'
 import './Nav.css';
 
 const Nav = () => {

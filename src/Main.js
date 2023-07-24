@@ -5,23 +5,23 @@ import ConfirmedBooking from "./ConfirmedBooking";
 import { useState, useReducer } from "react";
 import { fetchAPI, submitAPI } from "./api/api";
 
+const updateTimes = (state, action) => {
+  if (action && action.date) {
+    return { timeSlots: fetchAPI(action.date) };
+  }
+  return state;
+};
+
+const initializeTimes = {
+  timeSlots: fetchAPI(new Date()),
+};
+
 const Main = () => {
   const [date, setDate] = useState("");
   const [resTime, setResTime] = useState("17:00");
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
   const navigate = useNavigate();
-
-  const updateTimes = (state, action) => {
-    if (action.date) {
-      return { timeSlots: fetchAPI(action.date) };
-    }
-    return state;
-  };
-
-  const initializeTimes = {
-    timeSlots: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"],
-  };
 
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
 
@@ -80,3 +80,5 @@ const Main = () => {
 };
 
 export default Main;
+
+export { updateTimes, initializeTimes}
