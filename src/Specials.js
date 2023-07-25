@@ -30,7 +30,7 @@ const Specials = () => {
     <section className='specials'>
       <div className='specials-title'>
         <h1>This Week Specials</h1>
-        <button>Online Order</button>
+        <button aria-label='On Click'>Online Order</button>
       </div>
       <div className='food-card-container'>
         {dishes.map(dish => {
