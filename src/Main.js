@@ -42,8 +42,7 @@ const Main = () => {
     dispatch({ date: new Date(e.target.value) });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     const formData = {
       date: date,
       time: resTime,

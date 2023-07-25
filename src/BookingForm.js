@@ -31,7 +31,9 @@ const BookingForm = (props) => {
       occasion: occasion,
       resTime: resTime,
     },
-    onSubmit: props.handleSubmit,
+    onSubmit: (values) => {
+      props.handleSubmit()
+    },
     validationSchema: Yup.object({
       date: Yup.date().required("Required").nullable().min(yesterday, "Must be in the future"),
       guests: Yup.number()
@@ -50,7 +52,7 @@ const BookingForm = (props) => {
       <Heading as="h1" id="booking-form-title">
         Reservation Details
       </Heading>
-      <form onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik.handleSubmit} data-testid="booking-form">
         <FormControl isInvalid={formik.touched.date && formik.errors.date}>
           <FormLabel htmlFor="date">Choose date</FormLabel>
           <Input

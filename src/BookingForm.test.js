@@ -1,15 +1,15 @@
 /* eslint-disable testing-library/no-unnecessary-act */
-import { render, screen, waitFor, act } from "@testing-library/react";
+import { render, screen, waitFor, act, fireEvent } from "@testing-library/react";
 import BookingForm from "./BookingForm";
 import userEvent from "@testing-library/user-event";
 
-const dateState = ["2023-07-25", jest.fn()];
+const dateState = ["2032-07-25", jest.fn()];
 const guestState = [2, jest.fn()];
 const occasionState = ["Birthday", jest.fn()];
 const availableTimesState = [
   { timeSlots: ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"] },
 ];
-const resTimeState = ["10:00 AM", jest.fn()];
+const resTimeState = ["17:00", jest.fn()];
 const handleSubmit = jest.fn();
 
 test("Renders the BookingForm inputs", () => {
@@ -95,7 +95,6 @@ describe("BookingForm validation", () => {
         handleSubmit={handleSubmit}
       />
     );
-    const submitElement = screen.getByText("Make Your Reservation");
 
     const guestInput = screen.getByLabelText("Number of guests");
 
@@ -129,7 +128,7 @@ describe("BookingForm validation", () => {
 
     act(() => {
       userEvent.tab();
-      userEvent.click(submitElement);
+      fireEvent.submit(screen.getByTestId("booking-form"));
     });
 
     await waitFor(() => {
