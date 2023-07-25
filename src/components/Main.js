@@ -1,9 +1,9 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
-import HomePage from "./Homepage";
-import BookingPage from "./BookingPage";
-import ConfirmedBooking from "./ConfirmedBooking";
+import HomePage from "../pages/Homepage";
+import BookingPage from "../pages/BookingPage";
+import ConfirmedBooking from "../pages/ConfirmedBooking";
 import { useState, useReducer } from "react";
-import { fetchAPI, submitAPI } from "./api/api";
+import { fetchAPI, submitAPI } from "../api/api";
 
 const updateTimes = (state, action) => {
   if (action && action.date) {

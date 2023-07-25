@@ -1,4 +1,4 @@
-import RestaurantFoodImage from './assets/restauranfood.jpg';
+import RestaurantFoodImage from '../../assets/restauranfood.jpg';
 import { useNavigate } from "react-router-dom";
 import './CallToAction.css';
 

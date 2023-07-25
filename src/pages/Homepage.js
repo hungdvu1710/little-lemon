@@ -1,5 +1,5 @@
-import CallToAction from "./CallToAction";
-import Specials from "./Specials";
+import CallToAction from "./Home/CallToAction";
+import Specials from "./Home/Specials";
 
 const Homepage = () => {
   return (

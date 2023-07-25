@@ -1,4 +1,4 @@
-import BookingForm from "./BookingForm";
+import BookingForm from "./Booking/BookingForm";
 
 const BookingPage = (props) => {
   return (

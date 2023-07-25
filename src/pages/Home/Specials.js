@@ -1,8 +1,8 @@
 import './Specials.css';
 import FoodCard from './FoodCard';
-import GreekSalad from './assets/greek salad.jpg';
-import LemonDessert from './assets/lemon dessert.jpg';
-import Bruchetta from './assets/bruchetta.jpg';
+import GreekSalad from '../../assets/greek salad.jpg';
+import LemonDessert from '../../assets/lemon dessert.jpg';
+import Bruchetta from '../../assets/bruchetta.jpg';
 
 const dishes = [
   {
@@ -40,6 +40,7 @@ const Specials = () => {
               price={dish.price}
               description={dish.description}
               name={dish.name}
+              key={dish.name}
             />
           )
         })}
