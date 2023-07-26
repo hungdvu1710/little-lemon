@@ -1,6 +1,6 @@
 /* eslint-disable testing-library/no-unnecessary-act */
 import { render, screen, waitFor, act, fireEvent } from "@testing-library/react";
-import BookingForm from "./BookingForm";
+import BookingForm from "./pages/Booking/BookingForm";
 import userEvent from "@testing-library/user-event";
 
 const dateState = ["2032-07-25", jest.fn()];

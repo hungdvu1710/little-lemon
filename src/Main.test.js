@@ -1,4 +1,4 @@
-import { updateTimes, initializeTimes} from './Main';
+import { updateTimes, initializeTimes} from './components/Main';
 
 describe('initializeTimes reducer', () => {
   it('returns the initial state', () => {
