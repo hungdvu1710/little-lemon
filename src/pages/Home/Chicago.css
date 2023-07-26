@@ -1,0 +1,42 @@
+#chicago-content p {
+  color: black
+}
+
+#chicago-content h1 {
+  color: #495E57;
+  margin: 10pt 0 10pt 0;
+}
+
+.chicago {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10vw;
+}
+
+#chicago-images img {
+  max-width: 20vw;
+}
+
+#chefs-a {
+  transform: translate(0, 5vw);
+}
+
+#chefs-b {
+  transform: translate(5vw, 0);
+  z-index: -1;
+  position: relative;
+}
+
+@media screen and (max-width: 700px) {
+  #chicago-images img {
+    max-width: 30vw;
+  }
+
+  #chefs-a {
+    transform: translate(0, 5vw);
+  }
+
+  #chefs-b {
+    transform: translate(5vw, 0);
+  }
+}
